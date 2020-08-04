@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React,{Fragment} from 'react';
+import Nav from './src/navigation';
+import { Loader } from './src/component';
+import { StoreProvider } from './src/context/store';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+/*Fragment -->React Fragment helps in returning multiple elements. T
+he other alternative is to use a html element like div to wrap them. 
+But using extra html node can cause some semantic issues.*/
+
+function App(){
+  return(
+    <StoreProvider>
+      <Nav />
+      <Loader/>
+    </StoreProvider>
+    
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+
+
+

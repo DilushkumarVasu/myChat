@@ -19,7 +19,7 @@ export const AddUser = async(name,email,uid,profileImage) => {
 export const UpdateUser = async(uuid,imgSource) => {
     try {
         return await firebase
-            .database().ref('user/'+uuid)
+            .database().ref('users/'+uuid)
             .update({
                 profileImage:imgSource,
             });

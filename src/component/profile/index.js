@@ -33,5 +33,6 @@ export default ({ img, name, onImgTap, onEditImgTap }) => (
       </View>
     </View>
     <Text style={styles.welcome}>{name}</Text>
+    <Text style={{fontWeight:'bold'}}>V.Dilushkumar-17000297</Text>
   </View>
 );

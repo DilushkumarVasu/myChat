@@ -13,7 +13,7 @@ export default ({
     onSubmitEditing,
     onBlur,
     onFocus,
-    numberOfLines
+    numberOfLines,
 }) => (
     <TextInput
         style={[styles.input,inputStyle]}

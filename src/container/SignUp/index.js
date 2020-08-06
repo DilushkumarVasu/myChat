@@ -96,12 +96,6 @@ function SignUp({navigation}){
     };
 
     return(
-        //  <KeyboardAvoidingView
-        //     keyboardVerticalOffset={keyboardVerticalOffset}
-        //     behavior={Platform.OS == "ios" ? "padding" : "height"}
-        //     style={[globalStyle.flex1, { backgroundColor:'#D8F3F7'}]}
-        // >
-        // <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ScrollView style={[globalStyle.flex1,{backgroundColor:'#D8F3F7',flex: 1,paddingTop: Platform.OS === 'android' ? 50 : 0}]}>
             {
                 showLogo && (
@@ -110,9 +104,6 @@ function SignUp({navigation}){
                     </View>
                 )
             }
-            {/* <View style={[globalStyle.containerCentered]}>
-                <Logo />
-            </View> */}
             <View style={[globalStyle.flex2,globalStyle.sectionCentered]}>
                 <InputField 
                     placeholder="Enter name" 
@@ -154,8 +145,6 @@ function SignUp({navigation}){
                 >Login</Text>
             </View>
         </ScrollView>
-        // </TouchableWithoutFeedback>
-        // </KeyboardAvoidingView>
     );
 }
 

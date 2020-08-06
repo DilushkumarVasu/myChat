@@ -1,6 +1,9 @@
 import React,{useLayoutEffect, useState, useEffect,Fragment} from 'react';
 import {View,Text,SafeAreaView,FlatList,KeyboardAvoidingView,TouchableWithoutFeedback,Keyboard,Platform} from 'react-native';
-import ImagePicker from "react-native-image-picker";
+import ImageEditor from "@react-native-community/image-editor";
+//import ImagePicker from "react-native-image-picker";
+import * as ImagePicker from 'expo-image-picker';
+import * as Permissions from 'expo-permissions';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { globalStyle, color,appStyle } from '../../utility';
 import styles from './styles';
@@ -67,37 +70,9 @@ const Chat = ({route,navigation}) => {
     };
 
     // handle camera function
-    // const handleCamera = () => {
-    //     const option = {
-    //         storageOptions: {
-    //           skipBackup: true,
-    //         },
-    //       };
-      
-    //       ImagePicker.showImagePicker(option, (response) => {
-    //         if (response.didCancel) {
-    //           console.log("User cancel image picker");
-    //         } else if (response.error) {
-    //           console.log(" image picker error", response.error);
-    //         } else {
-    //           // Base 64
-    //           let source = "data:image/jpeg;base64," + response.data;
-      
-    //           senderMsg(msgValue,currentUserId,guestUserId,source)
-    //           .then(()=>{})
-    //           .catch((err)=>{
-    //               alert(err)
-    //           });
-
-    //         // guest user or receiver
-    //             recieverMsg(msgValue,currentUserId,guestUserId,source)
-    //             .then(()=>{})
-    //             .catch((err)=>{
-    //                 alert(err)
-    //             });
-    //         }
-    //       });
-    // };
+    const handleCamera = () => {
+        alert("You can now access your camera!")
+    };
 
     // On handle change
     const handleOnChange = (text) => {
@@ -111,16 +86,6 @@ const Chat = ({route,navigation}) => {
 
     return(
         <SafeAreaView style={[globalStyle.flex1,{backgroundColor:'#EDBB99'}]}>
-            {/* <KeyboardAvoidingView
-        keyboardVerticalOffset={deviceHeight > smallDeviceHeight ? 100 : 70}
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={[globalStyle.flex1,{backgroundColor:'#EDBB99'}]}
-      >
-        <TouchableWithoutFeedback
-          style={[globalStyle.flex1]}
-          onPress={Keyboard.dismiss}
-        >
-          <Fragment> */}
             <FlatList 
                 inverted
                 data={messeges}
@@ -138,7 +103,7 @@ const Chat = ({route,navigation}) => {
             {/*  send message component*/}
             <View style={styles.sendMessageContainer}>
                 <InputField 
-                    placeholder="Type Here"
+                    placeholder="Type Here..."
                     numberOfLines={10}
                     inputStyle={styles.input}
                     value={msgValue}
@@ -149,7 +114,7 @@ const Chat = ({route,navigation}) => {
                         name="camera"
                         color={color.BLACK}
                         size={appStyle.fieldHeight}
-                        // onPress={()=>handleCamera()}
+                        onPress={()=>handleCamera()}
                     />
                     <MaterialCommunityIcons 
                         name="send-circle"
@@ -159,9 +124,6 @@ const Chat = ({route,navigation}) => {
                     />
                 </View>
             </View>
-            {/* </Fragment>
-        </TouchableWithoutFeedback>
-      </KeyboardAvoidingView> */}
         </SafeAreaView>
     )
 };

@@ -42,10 +42,6 @@ const Loader = () => {
                     size="large"
                     animating={loading}
                     color={color.WHITE}
-                    // style={{
-                    //     left:Platform.OS === 'android'?1.3:0,
-                    //     top:Platform.OS === 'android'?1.3:0,
-                    // }}
                 />
             </View>
         </View>

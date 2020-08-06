@@ -86,13 +86,6 @@ function Login({navigation}){
         >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={[globalStyle.flex1,{backgroundColor:'#D8F3F7',flex: 1,paddingTop: Platform.OS === 'android' ? 25 : 0}]}>
-            {/* {
-                showLogo && (
-                    <View style={[globalStyle.containerCentered]}>
-                        <Logo />
-                    </View>
-                )
-            } */}
             <View style={[globalStyle.containerCentered]}>
                 <Logo />
             </View>

@@ -25,7 +25,7 @@ function NavContainer(){
                 <Stack.Screen name="Splash" component={Splash} options={{headerShown:false}}/>
                 <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
                 <Stack.Screen name="SignUp" component={SignUp} options={{headerShown:false}}/>
-                <Stack.Screen name="Dashboard" component={Dashboard} options={{headerLeft:null}}/>
+                <Stack.Screen name="Contacts" component={Dashboard} options={{headerLeft:null}}/>
                 <Stack.Screen name="ShowFullImg" component={ShowFullImg} options={{headerBackTitle :null}}/>
                 <Stack.Screen name="Chat" component={Chat} options={{headerBackTitle :null}}/>
             </Stack.Navigator>

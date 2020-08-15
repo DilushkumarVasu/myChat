@@ -17,7 +17,7 @@ const Splash = ({navigation}) => {
                 .then((uuid)=>{
                     if(uuid){
                         setUniqueValue(uuid);
-                        navigation.replace('Dashboard');
+                        navigation.replace('Contacts');
                     }
                     else{
                         navigation.replace('Login');

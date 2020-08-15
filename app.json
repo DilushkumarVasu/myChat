@@ -4,11 +4,20 @@
     "slug": "myChat",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/chat.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/chat.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "sdkVersion":"38.0.0",
+    "platforms":[
+      "ios",
+      "android"
+    ],
+    "android": {
+      "package": "com.dilush.myChat",
+      "versionCode": 1
     },
     "updates": {
       "fallbackToCacheTimeout": 0

@@ -45,7 +45,7 @@ function Login({navigation}){
                     dispatchLoaderAction({
                         type: LOADING_STOP,
                     });
-                    navigation.replace('Dashboard');
+                    navigation.replace('Contacts');
                 })
                 .catch((err)=>{
                     dispatchLoaderAction({
